@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FittHitt - Exercise Plan</title>
-    <link rel="stylesheet" href="Style.css">
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/images/FHlogo.webp" type="image/x-icon" />
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <header>
-        <div class="header-row">
-            <div class="box"><h1>FH</h1></div>
-            <h1 class="title">FittHitt</h1> 
-            <div class="spacer"></div>
-        </div>
-        <nav>
-            
+        <header class="header">
+    <div class="logobox">
+        <h1>Fithitt</h1>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-button-container">
+        <input type="checkbox" id="menuToggle" />
+        <label for="menuToggle" class="menu-button-label">Menu</label>
+        <nav class="dropdown-menu">
+            <a href="#home">Home</a>
+            <a href="#about">Nutrition</a>
+            <a href="#services">Workout Plan</a>
+            <a href="#contact">Learn More</a>
         </nav>
+    </div>
 </header>
 
 <main>
@@ -51,6 +68,62 @@
                  adequate nutrition, hydration, and sleep further enhances strength development and overall performance.
             </p>
         </div>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>30 min Light Jogging</td>
+                        <td>15 min Rowing Machine</td>
+                        <td>Rest Day</td>
+                        <td>20 min Cycling</td>
+                        <td>15 min Boxing Bag</td>
+                        <td>15 min Stairmaster</td>
+                        <td>Rest Day</td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Bicep Curls @ 50% ORM</td>
+                        <td>5 reps, 3 sets Bicep Curls @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Tricep Extensions @ 50% ORM</td>
+                        <td>5 reps, 3 sets Shoulder Press @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Bench Press @ 60% ORM</td>
+                        <td>5 reps, 3 sets Tricep Extensions @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Bent Over DB Rows @ 60% ORM</td>
+                        <td>5 reps, 3 sets Hammer Curls @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Lat Pulldown @ 60% ORM</td>
+                        <td>5 reps, 3 sets DB Rows @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8 reps, 4 sets Squats</td>
+                        <td>5 reps, 3 sets Lat Pulldown @ 85% ORM</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </main>
