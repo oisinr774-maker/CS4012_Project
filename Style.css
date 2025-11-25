@@ -1,70 +1,53 @@
 html, body {
-height: 100%;
-margin: 0;
-padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body::before {
-content: "";
-position: fixed;
-top: -100px;
-left: 0;
-width: 100%;
-height: calc(100% + 100px);
-background-image: url('background.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center top;
-z-index: -1;
+    content: "";
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: -1;
 }
 
 .header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-background-color: rgba(255, 0, 0, 0.8);
-height: 70px;
-border-radius: 8px;
-padding: 0 20px;
-position: relative;
-width: 100%;
-box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 0, 0, 0.8);
+    height: 70px;
+    border-radius: 8px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
-font-family: 'Bebas Neue', sans-serif;
-text-align: right;
-padding-right: 43px;
-width: 100%;
-top: 15px;
-margin: 0;
-font-size: 3em;
-letter-spacing: 8px;
-}
-
-.logo {
-top: -12px;
-left: 0px;
-width: 100px;
-height: auto;
-}
-
-
-
-.logo img {
-width: 100%;
-height: auto;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: right;
+    padding-right: 43px;
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 8px;
 }
 
 .header-row {
-  display: flex;
-  align-items: center;  
-  width: 100%;    
-  justify-content: space-between; 
-  padding: 1rem;       
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
-.title{
+.title {
     flex-grow: 1;
     text-align: center;
     color: gold;
@@ -76,97 +59,303 @@ height: auto;
     border: 2px solid goldenrod;
     border-radius: 5px;
     padding: 0.5em;
-    background-color:gold;
+    background-color: gold;
     text-align: center;
     color: #ffffff;
     width: 80px;
-    display: flex;
     height: 70px;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: large;
-
 }
 
-.spacer {
-    width: 80px;
-}
-
-nav ul {
-    list-style: none;
+nav, .nav-bar, .nav-bar ul {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    flex: 1;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
 }
 
-nav a {
-    color: gold;
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li a {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-bar ul li a:hover {
+    background-color: red;
+    transform: scale(1.05);
+}
+
+.menu-button-container {
+    flex-shrink: 0;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-button-label {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.menu-button-label:hover {
+    background-color: #333;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 160px;
+    padding: 12px 15px;
+    background-color: black;
+    border-radius: 6px;
+    transform-origin: top right;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px black;
+}
+
+#menuToggle:checked + .menu-button-label + .dropdown-menu {
+    transform: scaleY(1);
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffd700cc;
+    color: black;
 }
 
 main {
     padding: 2rem;
 }
 
-.plan h2 {
-    color: #b30000;
-    text-align: center;
-}
-
-.goals-row {
+.exercise-plan-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    background-color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-.goal {
-    flex: 1 1 30%;
-    background-color:#1a1a1a;
-    border-left: 5px solid gold;
-    padding: 1rem;
-    border-radius: 5px;
-    color:#ffffff
+.plan-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px 32px;
+    flex: 1;
+    color: #ffffff;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.table {
-  margin: 2rem 0;
-  overflow-x: auto;
+.plan-card:hover {
+    transform: translateY(-4px);
+}
+
+.plan-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #ffd700;
+}
+
+.plan-card .subtitle {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+.plan-card .description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 32px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.plan-card li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.plan-card li::before {
+    content: '✓';
+    background-color: #ffd700;
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.plan-card .terms {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+}
+
+.plan-card .terms li {
+    font-size: 13px;
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.plan-card .terms li::before {
+    content: '●';
+    color: #ffd700;
+    margin-right: 8px;
+    font-size: 10px;
+}
+
+.plan-card.featured button {
+    background-color: #ffd700;
+    color: #000000;
+    border: none;
+}
+
+.plan-card.featured button:hover {
+    background-color: #ffed4e;
+    transform: scale(1.02);
+}
+
+.plan-card:not(.featured) button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.plan-card:not(.featured) button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dropdown-arrow {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffd700;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.plan-card.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.table-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 0;
+}
+
+.table-container.active {
+    max-height: 2000px;
+    margin-top: 30px;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #000;
-  color: white;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000;
+    color: white;
 }
 
 th, td {
-  border: 2px solid gold;       
-  padding: 1rem;                
-  text-align: center;
-  vertical-align: top;
-  background-color: #1a1a1a;    
-  border-radius: 8px;           
+    border: 2px solid gold;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: top;
+    background-color: #1a1a1a;
+    border-radius: 8px;
 }
 
 th {
-  background-color: #b30000;
-  color: gold;
-  font-size: 1.1rem;
+    background-color: #b30000;
+    color: gold;
+    font-size: 1.1rem;
 }
 
 .smallheader {
-  background-color: #b30000;  
-  color: gold;                 
-  padding: 1rem;               
-  margin: 0;                   
-  text-align: center;        
-  width: 100%;                 
-  box-sizing: border-box;      
-  font-size: 1.5rem;
-  font-weight: bold;
+    background-color: #b30000;
+    color: gold;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .exercise-plan-container {
+        flex-direction: column;
+    }
+    
+    .plan-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
