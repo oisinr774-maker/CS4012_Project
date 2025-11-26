@@ -22,7 +22,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: #1a1a1a;
     height: 70px;
     border-radius: 8px;
     padding: 0 20px;
@@ -30,6 +30,10 @@ body::before {
     box-sizing: border-box;
 }
 
+.logobox {
+    color: white;
+    width: 200px;
+}
 h1 {
     font-family: 'Bebas Neue', sans-serif;
     text-align: right;
@@ -55,21 +59,6 @@ h1 {
     margin: 0;
 }
 
-.box {
-    border: 2px solid goldenrod;
-    border-radius: 5px;
-    padding: 0.5em;
-    background-color: gold;
-    text-align: center;
-    color: #ffffff;
-    width: 80px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-}
-
 nav, .nav-bar, .nav-bar ul {
     margin: 0;
     padding: 0;
@@ -81,6 +70,7 @@ nav, .nav-bar, .nav-bar ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1a1a1a;
 }
 
 .nav-bar ul {
@@ -103,12 +93,13 @@ nav, .nav-bar, .nav-bar ul {
 }
 
 .nav-bar ul li a:hover {
-    background-color: red;
+    background-color: gray;
     transform: scale(1.05);
 }
 
 .menu-button-container {
     flex-shrink: 0;
+    width: 200px;
 }
 
 #menuToggle {
@@ -317,36 +308,36 @@ main {
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #000;
-    color: white;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #000;
+  color: white;
 }
 
 th, td {
-    border: 2px solid gold;
-    padding: 1rem;
-    text-align: center;
-    vertical-align: top;
-    background-color: #1a1a1a;
-    border-radius: 8px;
+  border: 2px solid gold;     
+  padding: 1rem;                
+  text-align: center;
+  vertical-align: top;
+  background-color: #1a1a1a;    
+  border-radius: 8px;
 }
-
 th {
-    background-color: #b30000;
-    color: gold;
-    font-size: 1.1rem;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1.1rem;
 }
 
-.smallheader {
-    background-color: #b30000;
-    color: gold;
+footer {
+    background-color: #1a1a1a;
+    color: white;
     padding: 1rem;
     text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    justify-content: center;
 }
 
 @media (max-width: 1024px) {
